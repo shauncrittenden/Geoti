@@ -1,4 +1,1 @@
-Geoti
-=====
-
-Location based events over time.
+Geot - Location based events over time.

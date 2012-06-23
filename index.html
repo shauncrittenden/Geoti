@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+	<link rel="stylesheet" href="assets/css/base.css">
+	<link rel="stylesheet" href="assets/css/app.css">
+	<script src="assets/js/libs/modernizr-1.6.min.js"></script>
+	
+	<title>Geoti &bull; Geographical events over time</title><!-- 
+	
+	Inspired by Japanese artist Isao Hashimoto's piece, "2053". 
+	A data based time-lapse piece of global nuclear explosion locations between 1945 and 1998. 
+	
+	Design and development by : Shaun Crittenden  http://www.shauncrittenden.com/ -->
+	
+</head>
+<body>
+	
+	<header>
+			<h2><strong>Geoti</strong> <em>Geo</em><span>graphical events over</span> <em>ti</em><span>me</span></h2>
+			<h1>Nuclear explosions from 1945 - 2009</h1>
+			<a href="#" title="information about Geoti">i</a>
+			<ul>
+				<li><a href="#" class="button" id="play">watch<span></span><em></em></a></li>
+				<li><a href="#" class="button" id="discuss">discuss<span></span><em></em></a></li>
+				<li><a href="#" class="button" id="share">share<span></span><em></em></a></li>
+			</ul>
+	</header>
+	
+	<div id="wrap">
+		
+		<div id="map_wrap">
+			<div id="map"></div>
+		</div>
+		
+		<ul id="zoom">
+			<li><a href="#">+</a></li>
+			<li><a href="#">-<a></li>
+		</ul>
+		
+		<!--<form method="post" action="#">
+			<input type="range" min="194507" max="200905" value="0" step="1" />
+		</form>-->
+		
+		<div id="log">
+			<ol></ol>
+		</div>
+		
+		<div class="clock">
+			<h3>Clock</h3>
+			<dl>
+				<dt>Month</dt><dd id="m"></dd>
+				<dt>Day</dt><dd id="d"></dd>
+				<dt>Year</dt><dd id="y"></dd>
+			</dl>
+		</div>
+		
+		<!--<div id="debug" style="position:absolute; left:30px; top:90%; padding: 5px 10px 3px; background-color: rgba(255,255,255,.9); color: #555; box-shadow: 0 1px 3px #000;">&nbsp;</div>-->
+	</div>
+	
+	<article id="comments">
+		<section>
+			
+			
+			<div id="disqus_thread"></div>
+			<script type="text/javascript">
+			    var disqus_developer = (window.location.toString().indexOf('localhost') != -1 ) ? 1 : 0,
+			    	disqus_shortname = 'geoti',
+			    	disqus_identifier = '/#/nuclear';
+			    
+			    (function() {
+			        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+			        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+			        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+			    })();
+			</script>
+			
+			<a href="http://disqus.com" class="dsq-brlink">Comments powered by <span class="logo-disqus">Disqus</span></a>
+			
+		</section>
+	</article>
+	
+	<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.js"></script>
+	<script src="assets/js/infobox.js"></script>
+	<script src="assets/js/libs/date.js"></script>
+	<script src="assets/js/libs/sound.js"></script>
+	
+	<script src="assets/js/fixture.js"></script>
+	<script src="assets/js/geo.js"></script>
+	<script src="assets/js/ti.js"></script>
+	<script src="assets/js/app.js"></script>
+	
+	<script type="text/javascript">
+		var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+		document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+	</script>
+	<script type="text/javascript">
+		try {
+		var pageTracker = _gat._getTracker("UA-3135796-11");
+		pageTracker._trackPageview();
+		} catch(err) {}
+	</script>
+</body> 
+</html>

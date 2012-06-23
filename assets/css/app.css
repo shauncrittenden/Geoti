@@ -1,0 +1,357 @@
+/* 
+	app.css 
+	Primary UI styles
+*/
+
+
+/*
+	Global
+------------------------------------------------- */
+
+body {
+	font-size: 13px;
+}
+
+/* structure */
+html, body, #wrap {
+	background-color: #1e2833;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+#wrap {
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 0;
+}
+
+/* content */
+article {
+	display: none;
+	color: #fff;
+	background-color: rgba(28,40,49,.7);
+	padding: 0;
+	position: relative;
+	z-index: 900;
+	text-align: center;
+	min-height: 100%;
+}
+section {
+	background-color: #fff;
+	margin: 0 auto;
+	padding: 120px 30px ;
+	width: 600px;
+	text-align: left;
+	min-height: 100%;
+}
+.dsq-comment-text {
+	color: #444;
+}
+
+/* rounding */
+h1,
+.button,
+.clock,
+header > a {
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	-o-border-radius: 3px;
+	border-radius: 3px;
+}
+/* shadow */
+.button,
+.clock {
+	-webkit-box-shadow: 0px 3px 0px rgba(0,0,0,.3);
+	-moz-box-shadow: 0px 3px 0px rgba(0,0,0,.3);
+	-o-box-shadow: 0px 3px 0px rgba(0,0,0,.3);
+	box-shadow: 0px 3px 0px rgba(0,0,0,.3);
+}
+
+/* height & line-height */
+h1,
+h2,
+header p,
+header > a,
+.button {
+	float: left;
+	height: 30px;
+	line-height: 32px;
+	padding: 0 15px;
+}
+
+
+/*
+	Header
+------------------------------------------------- */
+header {
+	background-color: rgba(28,40,49,.1);
+	color: #FFF;
+	position: fixed;
+	z-index: 1000;
+	width: 100%;
+	padding: 0;
+	padding: 20px 0;
+}
+header:hover {
+	background-color: rgba(28,40,49,.4);
+}
+header.over {
+	background-color: rgba(28,40,49,.9);
+}
+header li,
+h2,
+header ul {
+	float: left;
+	margin-right: 15px;
+}
+h2 {
+	color: #b24326;
+	margin-left: 30px;
+	padding: 0;
+}
+h2 * {
+	display: inline-block;
+	overflow: hidden;
+	float: left;
+	white-space: nowrap;
+	padding-right: 1px;
+	font-style: normal;
+}
+h2 span:nth-child(n+2) {
+	margin-right: .3em;
+}
+h2 strong {
+	position: absolute;
+	left: -999em;
+}
+h1 {
+	background-color: rgba(0,0,0,.3);
+	float: left;
+	text-shadow: 0 1px 2px #000;
+}
+header > a,
+header > a:link,
+header > a:visited {
+	color: #fff;
+	background-color: rgba(0,0,0,.4);
+	float: left;
+	margin: 0 15px 0 1px;
+	font: italic 13px/32px Georgia, serif;
+	text-decoration: none;
+	text-shadow: 0 1px 2px #000;
+	-webkit-transition: background-color .2s ease-in;
+	-moz-transition: background-color .2s ease-in;
+	-o-transition: background-color .2s ease-in;
+	transition: background-color .2s ease-in;
+}
+header > a:hover {
+	background-color: rgba(0,0,0,.7);
+}
+
+
+/*
+	Buttons
+------------------------------------------------- */
+.button,
+.button:link,
+.button:visited {
+	color: #ffffef;
+	float: left;
+	background-color: #9b3c23;
+	height: 30px;
+	line-height: 32px;
+	padding: 0 15px 0 48px;
+	position: relative;
+	text-decoration: none;
+	-webkit-transition: all .2s ease-in;
+	-moz-transition: all .2s ease-in;
+	-o-transition: all .2s ease-in;
+	transition: all .2s ease-in;
+}
+.button:hover {
+	color: #fff;
+	background-color: #903720;
+}
+.button span,
+.button em {
+	background-color: #722c1a;
+	border-right: dashed 1px #9b3c23;
+	position: absolute;
+	display: block;
+	width: 33px;
+	height: 100%;
+	left: 0;
+	top: 0;
+}
+.button span {
+	-webkit-transition: all .2s ease-in;
+	-moz-transition: all .2s ease-in;
+	-o-transition: all .2s ease-in;
+	transition: all .2s ease-in;
+}
+.button:hover span {
+/*	background-color: #9b3c23;*/
+}
+.button span {
+	-webkit-border-top-left-radius: 3px;
+	-moz-border-radius-topleft: 3px;
+	-o-border-radius-topleft: 3px;
+	border-top-left-radius: 3px;
+	-webkit-border-bottom-left-radius: 3px;
+	-moz-border-radius-bottomleft: 3px;
+	-o-border-radius-bottomleft: 3px;
+	border-bottom-left-radius: 3px;
+}
+.button em {
+	border: none;
+	background: url(../i/sprite.png) left top no-repeat transparent;
+	width: 11px;
+	height: 8px;
+	top: auto;
+	bottom: -8px;
+	left: 11px;
+}
+#share em {
+	background-position: -11px top;
+	right: -6px;
+	width: 6px;
+	height: 14px;
+	top: 10px;
+	bottom: auto;
+	left: auto;
+}
+
+
+/*
+	Map
+------------------------------------------------- */
+#map_wrap,
+#map {
+	background-color: #1e2833 !important;
+	height: 100%;
+	width: 100%;
+}
+.gmnoprint {
+	display: none !important;
+}
+#map div div a div img { /* logo */
+	position: absolute !important;
+	top: auto !important; 
+	bottom: 10px !important;
+	left: 27px !important; 
+}
+#map > div > div:nth-child(n+3) { /* terms */ 
+	position: absolute !important;
+	left: 95px !important;
+	right: auto !important;
+	bottom: 15px !important;
+}
+#map > div > div:nth-child(n+3) > div {
+	background: none !important;
+}
+#map > div > div:nth-child(n+2) span,
+#map > div > div:nth-child(n+2) a {
+	color: #10161d !important;
+}
+#map > div > div:nth-child(n+2) a:hover {
+	color: #fff !important;
+}
+
+/* info windows */
+.geoti_info_window {
+	box-shadow: 0 3px 3px #000;
+	-moz-border-radius: 3px;
+	-o-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+}
+
+.geoti_marker{
+	outline: dotted 1px red !important;
+}
+
+
+
+/*
+	Event log
+------------------------------------------------- */
+#log {
+	display: block;
+	position: fixed;
+	bottom: 0;
+/*	top: 0;*/
+	bottom: 0;
+	left: auto;
+	right: 0;
+	width: 330px;
+	height: 100%;
+}
+#log ol {
+	position: absolute;
+	top: auto;
+/*	bottom: 51px;*/
+	bottom: 60px;
+	right: 0;
+	overflow: auto;
+/*	width: 100%;*/
+	width: 298px;
+/*	height: 200px;*/
+}
+ol li {
+	color: #fff;
+}
+
+
+/*
+	Clock
+------------------------------------------------- */
+.clock {
+	color: #fff;
+	display: block;
+	width: 300px;
+	height: 31px;
+	line-height: 32px;
+	position: absolute;
+	bottom: 20px;
+	right: 30px;
+	font-family: monospace;
+	color: #FFF;
+	font-size: 16px;
+}
+.clock h3, 
+.clock dl, 
+.clock dt,
+.clock dd {
+	float: left;
+	height: 31px;
+	overflow: hidden;
+}
+.clock h3 {
+	background-color: rgba(0,0,0,.3);
+	-webkit-border-top-left-radius: 3px;
+	-webkit-border-bottom-left-radius: 3px;
+	-moz-border-radius-topleft: 3px;
+	-moz-border-radius-bottomleft: 3px;
+	border-top-left-radius: 3px;
+	border-bottom-left-radius: 3px;
+	text-indent: -999em;
+	width: 32px;
+}
+.clock dl {
+	background-color: rgba(0,0,0,.3);
+	-webkit-border-top-right-radius: 3px;
+	-webkit-border-bottom-right-radius: 3px;
+	-moz-border-radius-topright: 3px;
+	-moz-border-radius-bottomright: 3px;
+	border-top-right-radius: 3px;
+	border-bottom-right-radius: 3px;
+	width: 267px;
+}
+.clock dt {
+	display: none;
+}
+.clock dd {
+	padding: 0 10px 0 0;
+}
